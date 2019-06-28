@@ -1,0 +1,6 @@
+r1= range(1,14)
+print (*r1)
+r2= range(100, 1, -1)
+print (*r2)
+r3 = range (100, 1000 , 7)
+print (*r3)
