@@ -1,0 +1,20 @@
+#pglayout {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+
+.Ansbox {
+    width: 250px;
+    height: 100px;
+    color: red;   
+    font-size: 30px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
