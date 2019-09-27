@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Events</title>
+    <link href="Anevents.css" rel="stylesheet" />
+    <!-- <link href="vietanh.css" rel="stylesheet"> -->
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css"/></head>
+
+  <body>
+    <div id="menu">
+      <button id="start" onclick="start()">START QUIZ!</button>
+      <!-- <button id = "credit">CREDIT</button> --> 
+    </div>
+
+    <div id="quiz" style="display : none;">
+      <div id="questionnumber"></div>
+      <div id="root">
+        <h1 id="question"></h1>
+        
+        <div id="Ansboxes">
+          <div class="layout">
+            <button
+              class="Ansbox"
+              id="A"
+              onclick="Anscheck(this.id)"
+              index="a"
+              onmouseout="colorbefore(this.id)"
+              onmouseover="colorafter(this.id)"
+            ></button>
+
+            <button
+              class="Ansbox"
+              id="B"
+              onclick="Anscheck(this.id)"
+              index="b"
+              onmouseout="colorbefore(this.id)"
+              onmouseover="colorafter(this.id)"
+            ></button>
+
+          </div>
+
+          <div class="layout">
+
+            <button
+              class="Ansbox"
+              id="C"
+              onclick="Anscheck(this.id)"
+              index="c"
+              onmouseout="colorbefore(this.id)"
+              onmouseover="colorafter(this.id)"
+            ></button>
+
+            <button
+              class="Ansbox"
+              id="D"
+              onclick="Anscheck(this.id)"
+              index="d"
+              onmouseout="colorbefore(this.id)"
+              onmouseover="colorafter(this.id)"
+            ></button>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="footer" >
+        <div class="footer-container">
+          <!-- <div class="popup">
+            <div id = "lives">LIVES: 0 -->
+          <div class="popup" id="lives">LIVES: 0
+              <span class="popuptext" id ="poptext">hi</span>
+          </div>
+              <!-- <span class="popuptext" id ="poptext">hi</span> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <p onclick="skipquest()" id="skips">SKIP: 3</p>
+        </div>
+      </div>
+      <!-- <div class="popup" id="lives">LIVES: 0
+          <span class="popuptext" id ="poptext">hi</span>
+      </div> -->
+
+      <audio id="rightsound">
+        <source src="rightAnsSound.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="wrongsound">
+        <source src="wrongAnsSound.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="oversound">
+        <source src="GameOver.mp3" type="audio/mpeg" />
+      </audio>
+
+      <script src="events.js"></script>
+      <script src="questions.js"></script>
+      <script src="checkans.js"></script>
+    </div>
+  </body>
+</html>
