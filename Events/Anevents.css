@@ -1,110 +1,126 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-html{
-    height: 100vh;
+html {
+  height: 100vh;
 }
-body{
-    min-height: 100%; 
-    margin: 0 20px;
+body {
+  min-height: 100%;
+  margin: 0 20px;
 }
 
 #menu {
-    position: relative;
-    top: 150px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #start {
-    font-size: 30px;
-    width: 500px;
-    height: 300px;
-    transition-duration: 0.3s;
-    background-color: white;
+  position: relative;
+  top: 370px;
+  left: 365px;
+  font-family: "Luckiest Guy";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 30px;
+  width: 500px;
+  height: 270px;
+  transition-duration: 0.3s;
+  background-color: white;
 }
 
-#start:hover{
-    background-color: #4CAF50;
-    color: white;
-    cursor: not-allowed;
+#start:hover {
+  background-color: #4caf50;
+  color: white;
+  cursor: not-allowed;
 }
 
 #questionnumber {
-    font-size: 30px;
-    color: red;   
-    /* display: flex; */
-    text-align: left;
-    display: inline-block;
+  display: contents;
+  position: absolute;
+  top: 10%;
+  left: 80px;
+  font-size: 50px;
+  color: red;
+  text-align: left;
+  display: inline-block;
 }
 
 #question {
-    text-transform: uppercase;
-    color: orange;
-    font-family: "Segoe Script";
-    display: flex;
-    text-align: center;
+  display: inline-block;
+  width: 1200px;
+  height:150px;
+  position: relative;
+  top: 10%;
+  left: 3%;
+  text-transform: uppercase;
+  color: orange;
+  font-family: "Segoe Script";
+  text-align: center;
 }
-
 
 /* #pglayout  */
 #root {
-    display:flex;
-    position: relative;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px;
+  display: flex;
+  position: relative;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 #Ansboxes {
-    width: 100%;
+  width: 90%;
 }
 
 .Ansbox {
-    width: 100%;
-    height: 100px;
-    color: red;   
-    font-size: 30px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    border: 1.5px solid #4CAF50;    
-    cursor: not-allowed;
-    background-color: lightgray;
+  width: 800px;
+  height: 100px;
+  color: red;
+  font-size: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border: 1.5px solid #4caf50;
+  cursor: not-allowed;
+  background-color: lightgray;
 }
 
 .layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-container {
+  min-width: 95%;
+  position: absolute;
+  top: 95%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #lives {
-    font-size: 30px;
-    color: red;   
-    /* text-align: left; */
-    display: inline-block;
-    margin: 0;
-    /* justify-content: flex-start; */
-    left: 30px;
+  position: relative;
+  left: 50px;
+  font-size: 30px;
+  color: red;
+  /* text-align: left; */
+  /* display: contents; */
+  margin: 0;
+  /* justify-content: flex-start; */
+  left: 30px;
 }
 
 #skips {
-    font-size: 30px;
-    color: red;   
-    cursor: pointer;
-    margin: 0;
-    right: 30px;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  margin: 0;
+  right: 30px;
 }
 
-.footer-container{
-    min-width: 95%;
-    position: absolute;
-    top: 95%;
-    display: flex;
-    justify-content: space-between;
-}
 
 /* #lives {
   position: relative;
@@ -112,7 +128,7 @@ body{
   cursor: pointer;
 } */
 
-#lives .popuptext {
+/* #lives .popuptext {
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -137,19 +153,24 @@ body{
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-
-#lives .show {
-    visibility: visible;
-  -webkit-animation: fadeIn 0.5s;
-  animation: fadeIn 0.5s
+*/
+.popup {
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 120px;
+  height: 30px;
+  bottom: 120%;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  animation: fadeIn ease-out 1s forwards;
+  /* animation-fill-mode: forwards; */
 }
 
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-  
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+  to {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+  }
 }

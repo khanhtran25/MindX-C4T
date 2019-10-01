@@ -7,7 +7,8 @@ var skipEl = document.getElementById("skips");
 var rightsound = document.getElementById("rightsound");
 var wrongsound = document.getElementById("wrongsound");
 var oversound = document.getElementById("oversound");
-var popup = document.getElementById("poptext");
+var popup = $('#popup');
+popup.hide();
 
 function earlygame() {
     questionnumber = 1;
@@ -19,6 +20,17 @@ function earlygame() {
 }
 
 earlygame()
+
+function start() {
+    wrongsound.play();
+    document.body.style.backgroundImage = "url('123.jpg')";
+    menu.style.display = "none";
+    quiz.style.display = "initial";
+    footer.style.display = "initial";
+    RunningQuestionIndex = 0;
+    earlygame()
+    LoopthroughQuestion();
+}
 
 const Q = document.getElementById("question")
 const A = document.getElementById("A")
@@ -57,12 +69,13 @@ function Anscheck(AnsID) {
         wrongsound.play();
         lives-=1;
         var livesEl = document.getElementById("lives");
-        livesEl.textContent = `LIVES: ${lives}`; 
-        pop();
+        livesEl.textContent = `LIVES: ${lives}`;
+        popitup();
         if (lives === 0) {
             oversound.play();
             alert("you loseeeee!")
             RunningQuestionIndex = 0;
+            document.body.style.backgroundImage = "url('start.jpg')";
             menu.style.display = "flex";
             quiz.style.display = "none";
             footer.style.display = "none";
@@ -77,25 +90,6 @@ function Anscheck(AnsID) {
         console.log(RunningQuestionIndex);
         RunningQuestionIndex++;
         LoopthroughQuestion();}
-    
-    if(RunningQuestionIndex===12) {
-        quest13();
-        LoopthroughQuestion();
-        // Anscheck();
-        if (AnsID === "A") {
-            RunningQuestionIndex = 8;
-            LoopthroughQuestion()
-        } if (AnsID === "B") {
-            RunningQuestionIndex = 10;
-            LoopthroughQuestion()
-        } if (AnsID === "C") {
-            RunningQuestionIndex = 13;
-            LoopthroughQuestion()
-        } if (AnsID === "D") {
-            RunningQuestionIndex = 6;
-            LoopthroughQuestion() }
-    } else {
-            LoopthroughQuestion();}
     if (RunningQuestionIndex > lastQuestionIndex) {
         alert("nice job!!!");
         RunningQuestionIndex = 0;
@@ -106,13 +100,40 @@ function Anscheck(AnsID) {
         LoopthroughQuestion();
     }
 }
-
+if(RunningQuestionIndex===12) {
+    quest13();
+    LoopthroughQuestion();
+    // Anscheck();
+    if (AnsID === "A") {
+        RunningQuestionIndex = 8;
+        LoopthroughQuestion()
+    } if (AnsID === "B") {
+        RunningQuestionIndex = 10;
+        LoopthroughQuestion()
+    } if (AnsID === "C") {
+        RunningQuestionIndex = 13;
+        LoopthroughQuestion()
+    } if (AnsID === "D") {
+        RunningQuestionIndex = 6;
+        LoopthroughQuestion() }
+} else {
+        LoopthroughQuestion();}
+        
 function quest13() {
     questionnumber = '?';
     number.textContent = `${questionnumber}.`;
 }
 
-function pop() {
-    console.log("ho")
-    popup.classList.toggle("show");
-}
+
+        
+    
+// function popitup() {
+//     popup.show(); 
+//     var popper = new Popper(ref,popup,{
+//         placement: 'top',
+//         onCreate: function(data){
+//                 // console.log(data);
+//         setTimeout(function(){popup.hide();}, 1000);
+//         },
+//     });
+// };

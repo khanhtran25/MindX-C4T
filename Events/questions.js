@@ -1,14 +1,5 @@
 var questions = [
     {//1
-        quiz: "How much time on average,does a person spend in the toilet in a lifetime?",
-        choiceA: ">= 3 years",
-        choiceB: "> 3 years",
-        choiceC: "3 years and half",
-        choiceD: "2.8 years <",
-        a: 'A',
-    },
-
-    {//2
         quiz: "chữ i là chữ thứ mấy trong bảng chữ cái (Tiếng Việt)?",
         choiceA: "13",
         choiceB: "10",
@@ -17,7 +8,7 @@ var questions = [
         a: 'B',
     },
 
-    {//3
+    {//2
         quiz: "What is the √onion?",
         choiceA: "Shallots",
         choiceB: "Carrot",
@@ -26,7 +17,7 @@ var questions = [
         a: 'A',
     },
 
-    {//4
+    {//3
         quiz: "0x1=0 là do 0 nhân số nào cũng bằng 0 hay 1 nhân với số nào cũng bằng chính nó?",
         choiceA: "Do 0 nhân số nào cũng bằng 0",
         choiceB: "Do 1 nhân với số nào cũng bằng chính nó",
@@ -34,7 +25,7 @@ var questions = [
         choiceD: "Tất cả đều sai 😜",
         a: 'C',
     },
-    //5
+    //4
     {
         quiz: ".jial jcwougn fyan rioh uaac fiwol rarT",
         choiceA: "WHOATTTT??",
@@ -44,7 +35,7 @@ var questions = [
         a: 'B',
     },
 
-    {//6
+    {//5
         quiz: "Bác sĩ đưa cho bạn 3 viên thuốc và bảo bạn cứ 30 phút thì uống một viên. Vậy mất bao nhiêu phút để uống hết thuốc?",
         choiceA: "90 phút",
         choiceB: "58 phút",
@@ -52,16 +43,16 @@ var questions = [
         choiceD: "21 phút",
         a: 'C',
     },
-//7
+//6
     {
         quiz: "Đút vào rồi lại rút ra. Vắng cửa, vắng nhà thì lại đút vô? Là vật gì?",
-        choiceA: "Bàn chải",
-        choiceB: "Chìa khóa",
+        choiceA: "Chìa khóa",
+        choiceB: "Bàn chải",
         choiceC: "Lỗ thông hơi",
         choiceD: "Bàn thờ",
-        a: 'B',
+        a: 'A',
     },
-   //8 
+   //7 
     {
         quiz: "Làm thế nào để không đụng phải ngón tay khi bạn đập búa vào một cái móng tay?",
         choiceA: "1 tay búa 1 tay móng",
@@ -70,7 +61,7 @@ var questions = [
         choiceD: "Quăng búa vào móng tay",
         a: 'C',
     },
-    //9
+    //8
     {
         quiz: "Chuông kêu thế nào?",
         choiceA: "F'TAANG",
@@ -79,7 +70,7 @@ var questions = [
         choiceD: "Flip-flop-flip-flop-chakalaka-dingalingaling-blip-blop",
         a: 'A',
     },
-    //10
+    //9
     {
         quiz: "Đáp án câu 2 là gì?",
         choiceA: "Cái kia",
@@ -88,7 +79,7 @@ var questions = [
         choiceD: "Cái này nèk",
         a: 'B',
     },
-    //11
+    //10
     {
         quiz: "Công thức hóa học của chuối là gì?",
         choiceA: "C7H14O2",
@@ -97,7 +88,7 @@ var questions = [
         choiceD: "BaNa2",
         a: 'D',
     },
-    //12
+    //11
     {
         quiz: "Trong một cuộc thi chạy, nếu bạn vượt qua người thứ 2, bạn sẽ đứng thứ mấy?",
         choiceA: "Thứ hai",
@@ -105,6 +96,15 @@ var questions = [
         choiceC: "Thứ nhất",
         choiceD: "Thắng luôn",
         a: 'A',
+    },
+    //12
+    {
+        quiz: "Hi there",
+        choiceA: "Hi 9",
+        choiceB: "Hi 11",
+        choiceC: "Hi 14",
+        choiceD: "Hi 7",
+        a: 'C',
     },
     //13
     {
@@ -114,6 +114,24 @@ var questions = [
         choiceC: "Sang câu 14",
         choiceD: "Sang câu 7",
         a: 'C',
+    },
+    //17
+    {
+        quiz: "Bạn làm sai câu này được không?",
+        choiceA: "Không",
+        choiceB: "Có thể",
+        choiceC: "Sai sao được",
+        choiceD: "Đương nhiên là không",
+        a: 'D',
+    },
+    //20
+    {
+        quiz: "Hãy chọn sáng suốt",
+        choiceA: "+1 mạng",
+        choiceB: "+1 skip",
+        choiceC: "-1 mạng",
+        choiceD: "Tốc biến",
+        a: 'B',
     },
 ]
 

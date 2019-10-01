@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Events</title>
     <link href="Anevents.css" rel="stylesheet" />
-    <!-- <link href="vietanh.css" rel="stylesheet"> -->
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css"/></head>
-
+    <link href="vietanh.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Luckiest+Guy"/> -->
+    <script src="events.js" defer> </script>
+    <script src="questions.js" defer></script>
+    <script src="checkans.js" defer></script>
+    <script src="jquery.min.js"></script>
+    <script src="popper.js"></script>
+  </head>
   <body>
     <div id="menu">
       <button id="start" onclick="start()">START QUIZ!</button>
@@ -16,7 +21,7 @@
     </div>
 
     <div id="quiz" style="display : none;">
-      <div id="questionnumber"></div>
+      <div onclick="quest16()" id="questionnumber"></div>
       <div id="root">
         <h1 id="question"></h1>
         
@@ -68,21 +73,15 @@
 
       <div id="footer" >
         <div class="footer-container">
-          <!-- <div class="popup">
-            <div id = "lives">LIVES: 0 -->
-          <div class="popup" id="lives">LIVES: 0
-              <span class="popuptext" id ="poptext">hi</span>
+          <button id="lives" onclick="popitup()">LIVES: 0</button>
+          <div id="popup">
+            -1
           </div>
-              <!-- <span class="popuptext" id ="poptext">hi</span> -->
-            <!-- </div> -->
-          <!-- </div> -->
-          <p onclick="skipquest()" id="skips">SKIP: 3</p>
+         
+        <p onclick="skipquest()" id="skips">SKIP: 3</p>
         </div>
       </div>
-      <!-- <div class="popup" id="lives">LIVES: 0
-          <span class="popuptext" id ="poptext">hi</span>
-      </div> -->
-
+    
       <audio id="rightsound">
         <source src="rightAnsSound.mp3" type="audio/mpeg" />
       </audio>
@@ -92,10 +91,35 @@
       <audio id="oversound">
         <source src="GameOver.mp3" type="audio/mpeg" />
       </audio>
-
-      <script src="events.js"></script>
-      <script src="questions.js"></script>
-      <script src="checkans.js"></script>
+      
+      <script>     
+        var popup = $('#popup');
+        popup.hide();
+        
+        // ref.click(function(){
+            function popitup() {
+                popup.show(); 
+                var popper = new Popper(ref,popup,{
+                        placement: 'top',
+                        onCreate: function(data){
+                                // console.log(data);
+                        setTimeout(function(){popup.hide();}, 1000);
+                        },
+            
+                        // modifiers: {
+                        //         flip: {
+                        //                 behavior: ['left', 'right', 'top','bottom']
+                        //         },
+                        //         offset: { 
+                        //                 enabled: true,
+                        //                 offset: '0,10'
+                        //         }
+                        // }
+                });
+        // });
+        };
+        </script>
+      
     </div>
   </body>
 </html>
