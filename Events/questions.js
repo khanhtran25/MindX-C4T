@@ -118,12 +118,12 @@ var questions = [
     //14
     {
         quiz: "Ở Thụy Sĩ có gì hay?",
-        choiceA: "Đồng hồ",
+        choiceA: "Hình như họ đồng hồ rất giỏi",
         choiceB: "Tôi không biết nhưng quốc kì họ là 1 điểm cộng lớn",
         choiceC: "Sang câu 14",
         choiceD: "Sang câu 7",
         a: 'C',
-    }
+    },
     //15
     {
         quiz: "Bạn làm sai câu này được không?",

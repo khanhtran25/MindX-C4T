@@ -37,6 +37,8 @@ body {
 }
 
 #questionnumber {
+  font-family: 'Turret Road', cursive;
+  font-weight: 600;
   display: contents;
   position: absolute;
   top: 7%;
