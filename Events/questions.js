@@ -57,7 +57,7 @@ var questions = [
         quiz: "Làm thế nào để không đụng phải ngón tay khi bạn đập búa vào một cái móng tay?",
         choiceA: "1 tay búa 1 tay móng",
         choiceB: "Nhổ móng của mình",
-        choiceC: "Cầm búa = cả 2 tay",
+        choiceC: "Cầm búa bằng cả 2 tay",
         choiceD: "Quăng búa vào móng tay",
         a: 'C',
     },
@@ -73,20 +73,20 @@ var questions = [
     //9
     {
         quiz: "Đáp án câu 2 là gì?",
-        choiceA: "Cái kia",
-        choiceB: "Cái kia",
-        choiceC: "Cái kia",
-        choiceD: "Cái này nèk",
-        a: 'B',
+        choiceA: "Cái cuối Uwu",
+        choiceB: "Cái dưới 👇👇 :)",
+        choiceC: "⬆⬆ Cái trên ⬆⬆ :D",
+        choiceD: "Cái đầu =))",
+        a: 'A',
     },
     //10
     {
         quiz: "Công thức hóa học của chuối là gì?",
         choiceA: "C7H14O2",
         choiceB: "H20",
-        choiceC: "C6H12O6",
-        choiceD: "BaNa2",
-        a: 'D',
+        choiceC: "BaNa2",
+        choiceD: "C6H12O6",
+        a: 'C',
     },
     //11
     {
@@ -99,12 +99,12 @@ var questions = [
     },
     //12
     {
-        quiz: "Hi there",
-        choiceA: "Hi 9",
-        choiceB: "Hi 11",
-        choiceC: "Hi 14",
-        choiceD: "Hi 7",
-        a: 'C',
+        quiz: "Chuyến đi thăm của Arianna Grande ở Việt Nam diễn ra thế nào?",
+        choiceA: "Tour - cờ",
+        choiceB: "Tour - rua",
+        choiceC: "Tour - cua",
+        choiceD: "Te - tour",
+        a: 'D',
     },
     //13
     {
@@ -115,7 +115,16 @@ var questions = [
         choiceD: "Sang câu 7",
         a: 'C',
     },
-    //17
+    //14
+    {
+        quiz: "Ở Thụy Sĩ có gì hay?",
+        choiceA: "Đồng hồ",
+        choiceB: "Tôi không biết nhưng quốc kì họ là 1 điểm cộng lớn",
+        choiceC: "Sang câu 14",
+        choiceD: "Sang câu 7",
+        a: 'C',
+    }
+    //15
     {
         quiz: "Bạn làm sai câu này được không?",
         choiceA: "Không",
@@ -124,6 +133,15 @@ var questions = [
         choiceD: "Đương nhiên là không",
         a: 'D',
     },
+    //16
+    {
+        quiz: "45 - 29 = ?",
+        choiceA: "4",
+        choiceB: "105",
+        choiceC: "XVI",
+        choiceD: "Dưới tuổi 😱",
+        a: 'E',
+    },
     //20
     {
         quiz: "Hãy chọn sáng suốt",
@@ -131,6 +149,16 @@ var questions = [
         choiceB: "+1 skip",
         choiceC: "-1 mạng",
         choiceD: "Tốc biến",
+        a: 'B',
+    },
+    
+    //19
+    {
+        quiz: "Are you enjoying the quiz?",
+        choiceA: "No",
+        choiceB: "Yes",
+        choiceC: "lav it",
+        choiceD: "noce",
         a: 'B',
     },
 ]

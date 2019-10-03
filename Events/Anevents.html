@@ -7,12 +7,11 @@
     <title>Events</title>
     <link href="Anevents.css" rel="stylesheet" />
     <link href="vietanh.css" rel="stylesheet"/>
-    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Luckiest+Guy"/> -->
+    <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <script src="events.js" defer> </script>
     <script src="questions.js" defer></script>
     <script src="checkans.js" defer></script>
-    <script src="jquery.min.js"></script>
-    <script src="popper.js"></script>
   </head>
   <body>
     <div id="menu">
@@ -73,12 +72,9 @@
 
       <div id="footer" >
         <div class="footer-container">
-          <button id="lives" onclick="popitup()">LIVES: 0</button>
-          <div id="popup">
-            -1
-          </div>
-         
-        <p onclick="skipquest()" id="skips">SKIP: 3</p>
+          <div id="lives">LIVES: 0</div>
+          <p class="hidden">-1</p>
+          <div onclick="skipquest()" id="skips">SKIPS: 3</div>
         </div>
       </div>
     
@@ -91,34 +87,6 @@
       <audio id="oversound">
         <source src="GameOver.mp3" type="audio/mpeg" />
       </audio>
-      
-      <script>     
-        var popup = $('#popup');
-        popup.hide();
-        
-        // ref.click(function(){
-            function popitup() {
-                popup.show(); 
-                var popper = new Popper(ref,popup,{
-                        placement: 'top',
-                        onCreate: function(data){
-                                // console.log(data);
-                        setTimeout(function(){popup.hide();}, 1000);
-                        },
-            
-                        // modifiers: {
-                        //         flip: {
-                        //                 behavior: ['left', 'right', 'top','bottom']
-                        //         },
-                        //         offset: { 
-                        //                 enabled: true,
-                        //                 offset: '0,10'
-                        //         }
-                        // }
-                });
-        // });
-        };
-        </script>
       
     </div>
   </body>

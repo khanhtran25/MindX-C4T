@@ -18,15 +18,13 @@ body {
 
 #start {
   position: relative;
-  top: 370px;
+  top: 350px;
   left: 365px;
-  font-family: "Luckiest Guy";
-  font-style: normal;
-  font-variant: normal;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 400;
   line-height: 20px;
-  font-size: 30px;
-  width: 500px;
+  font-size: 35px;
+  width: 450px;
   height: 270px;
   transition-duration: 0.3s;
   background-color: white;
@@ -41,8 +39,8 @@ body {
 #questionnumber {
   display: contents;
   position: absolute;
-  top: 10%;
-  left: 80px;
+  top: 7%;
+  left: 85px;
   font-size: 50px;
   color: red;
   text-align: left;
@@ -52,10 +50,10 @@ body {
 #question {
   display: inline-block;
   width: 1200px;
-  height:150px;
+  height:200px;
   position: relative;
-  top: 10%;
-  left: 3%;
+  top: -30px;
+  left: 60px;
   text-transform: uppercase;
   color: orange;
   font-family: "Segoe Script";
@@ -69,11 +67,11 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
+  margin: 50px;
 }
 
 #Ansboxes {
-  width: 90%;
+  width: 100%;
 }
 
 .Ansbox {
@@ -96,25 +94,42 @@ body {
 .footer-container {
   min-width: 95%;
   position: absolute;
-  top: 95%;
+  top: 89%;
   display: flex;
   justify-content: space-between;
 }
 
 #lives {
+  font-family: 'Turret Road', cursive;
+  font-weight: 600;
   position: relative;
-  left: 50px;
-  font-size: 30px;
+  left: 200px;
+  font-size: 50px;
   color: red;
   /* text-align: left; */
   /* display: contents; */
   margin: 0;
   /* justify-content: flex-start; */
-  left: 30px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.show{
+  display: inline-block;
+  position: relative;
+  top: -130px;
+  right: 345px;
+  color: red;
+  font-size: 50px;
+  background-color: black;
 }
 
 #skips {
-  font-size: 30px;
+  font-family: 'Turret Road';
+  font-weight: 600;
+  font-size: 50px;
   color: red;
   cursor: pointer;
   margin: 0;

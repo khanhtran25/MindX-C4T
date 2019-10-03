@@ -7,8 +7,7 @@ var skipEl = document.getElementById("skips");
 var rightsound = document.getElementById("rightsound");
 var wrongsound = document.getElementById("wrongsound");
 var oversound = document.getElementById("oversound");
-var popup = $('#popup');
-popup.hide();
+let pop = document.querySelector(".hidden");
 
 function earlygame() {
     questionnumber = 1;
@@ -16,14 +15,14 @@ function earlygame() {
     lives = 3;
     livesEl.textContent = `LIVES: ${lives}`;
     skip = 3;
-    skipEl.textContent = `SKIP: ${skips}`;
+    skipEl.textContent = `SKIPS: ${skips}`;
 }
 
 earlygame()
 
 function start() {
     wrongsound.play();
-    document.body.style.backgroundImage = "url('123.jpg')";
+    document.body.style.backgroundImage = "url('123origin.jpg')";
     menu.style.display = "none";
     quiz.style.display = "initial";
     footer.style.display = "initial";
@@ -63,6 +62,18 @@ function LoopthroughQuestion() {
 }
 
 LoopthroughQuestion();
+console.log(RunningQuestionIndex);
+
+function Questcheck() {
+    if(RunningQuestionIndex===15) {
+        quest16();
+        // Anscheck()
+    } else {
+        LoopthroughQuestion();
+    }
+}
+
+Questcheck();
 
 function Anscheck(AnsID) {
     if (questions[RunningQuestionIndex].a !== AnsID) {
@@ -70,10 +81,11 @@ function Anscheck(AnsID) {
         lives-=1;
         var livesEl = document.getElementById("lives");
         livesEl.textContent = `LIVES: ${lives}`;
-        popitup();
+        minuslive()
         if (lives === 0) {
             oversound.play();
-            alert("you loseeeee!")
+            alert("you lost");
+            alert(point);
             RunningQuestionIndex = 0;
             document.body.style.backgroundImage = "url('start.jpg')";
             menu.style.display = "flex";
@@ -84,15 +96,38 @@ function Anscheck(AnsID) {
         }
     } else {
         rightsound.play();
+        point++;
         questionnumber++;
         var number = document.getElementById("questionnumber");
         number.textContent = `${questionnumber}.`;
         console.log(RunningQuestionIndex);
+        console.log(AnsID);
         RunningQuestionIndex++;
         LoopthroughQuestion();}
+    // if(RunningQuestionIndex===12) {
+    //     quest13();
+    //     LoopthroughQuestion();
+    //     A.addEventListener("click",function() {
+    //         questionnumber = 9;
+    //         number.textContent = `${questionnumber}.`;
+    //         RunningQuestionIndex = 8;
+    //         LoopthroughQuestion();
+    //         Anscheck();
+    //     });
+    //     // B.addEventListener("click",function() {
+    //     //     questionnumber = 11;
+    //     //     number.textContent = `${questionnumber}.`;
+    //     //     RunningQuestionIndex = 10;
+    //     //     LoopthroughQuestion();
+    //     //     // Anscheck();
+    //     // })
+    // } else {
+    //         LoopthroughQuestion();}
+    
     if (RunningQuestionIndex > lastQuestionIndex) {
         alert("nice job!!!");
         RunningQuestionIndex = 0;
+        document.body.style.backgroundImage = "url('start.jpg')";
         menu.style.display = "flex";
         quiz.style.display = "none";
         footer.style.display = "none";
@@ -100,40 +135,43 @@ function Anscheck(AnsID) {
         LoopthroughQuestion();
     }
 }
-if(RunningQuestionIndex===12) {
-    quest13();
-    LoopthroughQuestion();
-    // Anscheck();
-    if (AnsID === "A") {
-        RunningQuestionIndex = 8;
-        LoopthroughQuestion()
-    } if (AnsID === "B") {
-        RunningQuestionIndex = 10;
-        LoopthroughQuestion()
-    } if (AnsID === "C") {
-        RunningQuestionIndex = 13;
-        LoopthroughQuestion()
-    } if (AnsID === "D") {
-        RunningQuestionIndex = 6;
-        LoopthroughQuestion() }
-} else {
-        LoopthroughQuestion();}
-        
 function quest13() {
     questionnumber = '?';
     number.textContent = `${questionnumber}.`;
 }
 
 
-        
-    
-// function popitup() {
-//     popup.show(); 
-//     var popper = new Popper(ref,popup,{
-//         placement: 'top',
-//         onCreate: function(data){
-//                 // console.log(data);
-//         setTimeout(function(){popup.hide();}, 1000);
-//         },
-//     });
-// };
+function minuslive() {
+    setTimeout(function(){
+        pop.classList.remove("hidden");
+        pop.classList.add("show");
+    },0);
+    setTimeout(function(){
+        pop.classList.remove("show");
+        pop.classList.add("hidden");
+    },1250);
+}
+
+
+
+function quest16() {
+    document.getElementById("questionnumber").addEventListener("mouseover",mouseOver);
+    function mouseOver(){
+        document.getElementById("questionnumber").style.color = "lawngreen";
+        console.log("in");
+    }
+    document.getElementById("questionnumber").addEventListener("mouseout",mouseOut);
+    function mouseOut(){
+        document.getElementById("questionnumber").style.color = "lawngreen";
+        console.log("in");
+    }
+    document.getElementById("questionnumber").addEventListener("click",function(){
+        rightsound.play();
+        questionnumber++;
+        var number = document.getElementById("questionnumber");
+        number.textContent = `${questionnumber}.`;
+        console.log(RunningQuestionIndex);
+        RunningQuestionIndex++;
+        LoopthroughQuestion();
+    })
+}
