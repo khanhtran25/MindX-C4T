@@ -54,11 +54,12 @@ body {
   width: 1200px;
   height:200px;
   position: relative;
-  top: -30px;
+  top: -60px;
   left: 60px;
   text-transform: uppercase;
   color: orange;
-  font-family: "Segoe Script";
+  font-family: 'Schoolbell', cursive;
+  font-size: 45px;
   text-align: center;
 }
 

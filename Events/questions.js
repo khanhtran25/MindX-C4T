@@ -7,23 +7,21 @@ var questions = [
         choiceD: "12",
         a: 'B',
     },
-
     {//2
-        quiz: "What is the √onion?",
-        choiceA: "Shallots",
-        choiceB: "Carrot",
-        choiceC: "What????",
-        choiceD: "Pi (π)",
-        a: 'A',
-    },
-
-    {//3
         quiz: "0x1=0 là do 0 nhân số nào cũng bằng 0 hay 1 nhân với số nào cũng bằng chính nó?",
         choiceA: "Do 0 nhân số nào cũng bằng 0",
         choiceB: "Do 1 nhân với số nào cũng bằng chính nó",
         choiceC: "Cả A và B 🤷‍♀️",
         choiceD: "Tất cả đều sai 😜",
         a: 'C',
+    },
+    {//3
+        quiz: "Câu trả lời là điều rất hiển nhiên",
+        choiceA: "Dễ",
+        choiceB: "Câu tiếp",
+        choiceC: "ĐIỀU RẤT HIỂN NHIÊN",
+        choiceD: "1+1=2",
+        a: 'D',
     },
     //4
     {
@@ -67,7 +65,7 @@ var questions = [
         choiceA: "F'TAANG",
         choiceB: "VROOMMM",
         choiceC: "WHOOP",
-        choiceD: "Flip-flop-flip-flop-chakalaka-dingalingaling-blip-blop",
+        choiceD: "Flip-flop-flip-flop-chakalaka-dingalingaling-blip-blop-chop-chop-399-for-free",
         a: 'A',
     },
     //9
@@ -117,12 +115,12 @@ var questions = [
     },
     //14
     {
-        quiz: "Ở Thụy Sĩ có gì hay?",
+        quiz: "Thụy Sĩ có gì hay?",
         choiceA: "Hình như họ đồng hồ rất giỏi",
         choiceB: "Tôi không biết nhưng quốc kì họ là 1 điểm cộng lớn",
-        choiceC: "Sang câu 14",
-        choiceD: "Sang câu 7",
-        a: 'C',
+        choiceC: "Dãy Alps hùng vĩ",
+        choiceD: "Bạn chưa biết về lẩu phomai (cheese foundue) ở đó à?",
+        a: 'B',
     },
     //15
     {
@@ -135,14 +133,15 @@ var questions = [
     },
     //16
     {
-        quiz: "45 - 29 = ?",
+        quiz: "21 - 5 = ?",
         choiceA: "4",
         choiceB: "105",
         choiceC: "XVI",
         choiceD: "Dưới tuổi 😱",
         a: 'E',
     },
-    //20
+
+    //18
     {
         quiz: "Hãy chọn sáng suốt",
         choiceA: "+1 mạng",
@@ -154,11 +153,11 @@ var questions = [
     
     //19
     {
-        quiz: "Are you enjoying the quiz?",
-        choiceA: "No",
-        choiceB: "Yes",
-        choiceC: "lav it",
-        choiceD: "noce",
+        quiz: "Bạn có thấy thích những câu hỏi này?",
+        choiceA: "N0P3",
+        choiceB: "Yeeettttt",
+        choiceC: "<3 :3",
+        choiceD: "Có chứ",
         a: 'B',
     },
 ]
