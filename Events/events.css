@@ -1,0 +1,91 @@
+html,body,#root {
+    height: 100%;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start {
+    font-size: 30px;
+    width: 500px;
+    height: 300px;
+    transition-duration: 0.3s;
+    background-color: white;
+}
+
+#start:hover{
+    background-color: #4CAF50;
+    color: white;
+    cursor: not-allowed;
+}
+
+#questionnumber {
+    font-size: 30px;
+    color: red;   
+    /* display: flex; */
+    text-align: left;
+    display: inline-block;
+}
+
+#question {
+    text-transform: uppercase;
+    color: orange;
+    font-family: "Segoe Script";
+    display: flex;
+    text-align: center;
+}
+
+
+/* #pglayout  */
+#root {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+
+.Ansbox {
+    width: 500px;
+    height: 100px;
+    color: red;   
+    font-size: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border: 1.5px solid #4CAF50;    
+    cursor: not-allowed;
+    background-color: lightgray;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#lives {
+    font-size: 30px;
+    color: red;   
+    /* display: flex; */
+    text-align: left;
+    display: inline-block;
+    /* justify-content: flex-start; */
+}
+
+#skips {
+    position: absolute;
+    right:0px;
+    font-size: 30px;
+    color: red;   
+    display: contents;
+    float: right;
+    cursor: pointer;
+    /*
+    text-align: right;
+    /* justify-content: flex-end; */
+}
+
+
