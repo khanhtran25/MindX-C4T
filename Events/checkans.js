@@ -58,22 +58,17 @@ function LoopthroughQuestion() {
         B.innerHTML = q.choiceB;
         C.innerHTML = q.choiceC;
         D.innerHTML = q.choiceD;
-    }
+    };
+    if(RunningQuestionIndex===15) {
+        quest16();};
+        // Anscheck()
+    // } else {
+    //     LoopthroughQuestion();
+    // };
 }
 
 LoopthroughQuestion();
 console.log(RunningQuestionIndex);
-
-function Questcheck() {
-    if(RunningQuestionIndex===15) {
-        quest16();
-        // Anscheck()
-    } else {
-        LoopthroughQuestion();
-    }
-}
-
-Questcheck();
 
 function Anscheck(AnsID) {
     if (questions[RunningQuestionIndex].a !== AnsID) {
@@ -163,9 +158,10 @@ function quest16() {
     document.getElementById("questionnumber").addEventListener("mouseout",mouseOut);
     function mouseOut(){
         document.getElementById("questionnumber").style.color = "lawngreen";
-        console.log("in");
+        console.log("out");
     }
-    document.getElementById("questionnumber").addEventListener("click",function(){
+    document.getElementById("questionnumber").addEventListener("click",numclick);
+    function numclick() {   
         rightsound.play();
         questionnumber++;
         var number = document.getElementById("questionnumber");
@@ -173,5 +169,5 @@ function quest16() {
         console.log(RunningQuestionIndex);
         RunningQuestionIndex++;
         LoopthroughQuestion();
-    })
+    };
 }
