@@ -7,6 +7,7 @@ var skipEl = document.getElementById("skips");
 var rightsound = document.getElementById("rightsound");
 var wrongsound = document.getElementById("wrongsound");
 var oversound = document.getElementById("oversound");
+var winsound = document.getElementById("winsound");
 let pop = document.querySelector(".hidden");
 
 function earlygame() {
@@ -121,7 +122,9 @@ function Anscheck(AnsID) {
     //         LoopthroughQuestion();}
     
     if (RunningQuestionIndex > lastQuestionIndex) {
+        winsound.play();
         alert("nice job!!!");
+        alert(point);
         RunningQuestionIndex = 0;
         document.body.style.backgroundImage = "url('start.jpg')";
         menu.style.display = "flex";
