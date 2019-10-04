@@ -43,6 +43,8 @@ let RunningQuestionIndex = 0;
 
 
 function LoopthroughQuestion() {
+    if(RunningQuestionIndex===15) {
+        quest16();};
     if (RunningQuestionIndex === questions.length) {
         let q = questions[RunningQuestionIndex - 1];
         question.innerHTML = "<p>" + q.quiz + "</p>";
@@ -59,8 +61,7 @@ function LoopthroughQuestion() {
         C.innerHTML = q.choiceC;
         D.innerHTML = q.choiceD;
     };
-    if(RunningQuestionIndex===15) {
-        quest16();};
+    
         // Anscheck()
     // } else {
     //     LoopthroughQuestion();
